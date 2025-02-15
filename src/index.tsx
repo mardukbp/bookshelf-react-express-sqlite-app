@@ -1,6 +1,6 @@
 // Import deps
 import React from 'react'
-import { render } from 'react-dom'
+import ReactDOM from "react-dom/client";
 
 // Import components
 import { Bookshelf } from './components/bookshelf'
@@ -9,7 +9,7 @@ import { Bookshelf } from './components/bookshelf'
 import './styles/styles.css'
 
 // Find div container
-const rootElement = document.getElementById('root')
+const rootElement = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
 // Render Bookshelf component in the DOM
-render(<Bookshelf />, rootElement)
+rootElement.render(<Bookshelf />)
